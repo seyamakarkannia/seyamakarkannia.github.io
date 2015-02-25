@@ -1,0 +1,34 @@
+//
+// SITE
+//
+
+
+// -------------------------------------------------------------
+// # Site layout
+// -------------------------------------------------------------
+
+// Use a site wrapper?
+// In that case remove width declarations on .row
+
+// .site {
+//     width: $site-width;
+//     max-width: $site-max-width;
+//     @extend .center;
+// }
+
+// .row {
+//     width: $site-width-mobile;
+//     //max-width: $site-max-width;
+//     @extend .center;
+//     //margin-bottom: $margin;
+//     @include clearfix;
+
+//     @include bp(medium) {
+//         width: $site-width-tablet;
+//     }
+// }
+
+.wrap {
+    width: 96%;
+    margin: 0 auto;
+}
