@@ -1,2 +1,0 @@
-# seyamakarkannia.github.io
-Portfolio
