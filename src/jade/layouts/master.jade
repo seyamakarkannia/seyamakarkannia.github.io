@@ -5,30 +5,32 @@ html
     head
         meta(charset="utf-8")
         title Seyamak Arkannia - Digital strategist, designer & developer from Malmö, Sweden 
-        meta(name="description", content="")
+        meta(name="description", content="Digital strategist, ux/ui designer and front-end developer from Malmö, Sweden")
         meta(name="viewport", content="width=device-width, initial-scale=1")
 
         script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
-        link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700', type='text/css')
         
         link(rel='stylesheet', href='css/app.css')
         link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css') 
-
-
 
     body
 
         .site
             
-            .blocker
+            img(src="images/logo.svg")
+                
+            div.links
+                
+                a(href='http://se.linkedin.com/in/seyamakarkannia')
+                    <i class="ion-social-linkedin"></i>
+                
+                a(href='mailto:no-one@snai1mai1.com?subject=Hello') 
+                    <i class="ion-paper-airplane"></i>
             
-            .header
- 
+            block header
 
             block content
 
-            .footer
-
-                    
+            block footer                    
                 
             script(type='text/javascript', src='js/app.js')
