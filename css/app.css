@@ -508,8 +508,8 @@ a, a:active, a:visited {
       .site img {
         width: 500px; } }
   .site .links {
-    margin-top: 1em;
-    font-size: 2.5em; }
+    margin-top: 1.5em;
+    font-size: 2em; }
     .site .links i {
       color: #fff; }
     .site .links a:first-child i {
