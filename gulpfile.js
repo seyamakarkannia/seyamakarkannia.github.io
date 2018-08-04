@@ -36,9 +36,8 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['styles']);
-    // gulp.watch('src/jade/**/*.jade', ['content']);
     gulp.watch('src/js/**/*.js', ['js']);
-    gulp.watch('src/images/*.jpg', ['images']);
+    // gulp.watch('src/images/*.jpg', ['images']);
 });
 
 
