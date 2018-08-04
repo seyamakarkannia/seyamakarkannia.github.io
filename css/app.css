@@ -444,7 +444,7 @@ a, a:active, a:visited {
       -ms-flex-direction: row;
       flex-direction: row; } }
   .site .image {
-    background: url("../img/seyamakarkannia.jpg") center center no-repeat;
+    background: url("../img/seyamakarkannia-min.jpg") center center no-repeat;
     background-size: cover;
     padding-bottom: 80%; }
     @media (min-width: 768px) {
