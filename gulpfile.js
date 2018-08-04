@@ -1,9 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    jade = require('gulp-jade'),
     uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
-    livereload = require('gulp-livereload'),
     connect = require('gulp-connect'),
     svgmin = require('gulp-svgmin'),
     deploy = require("gulp-gh-pages");
@@ -13,13 +11,6 @@ gulp.task('styles', function() {
         .pipe(sass({ style: 'expanded' }))
         .pipe(autoprefixer('last 2 version'))
         .pipe(gulp.dest('build/css'))
-        .pipe(connect.reload());
-});
-
-gulp.task('content', function() {
-    gulp.src(['src/jade/**/*.jade', '!src/jade/layouts/**'])
-        .pipe(jade({ pretty: true }))
-        .pipe(gulp.dest('build'))
         .pipe(connect.reload());
 });
 
@@ -45,7 +36,7 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['styles']);
-    gulp.watch('src/jade/**/*.jade', ['content']);
+    // gulp.watch('src/jade/**/*.jade', ['content']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/images/*.jpg', ['images']);
 });
@@ -55,7 +46,7 @@ gulp.task('watch', function() {
 // # Default task
 // -------------------------------------------------------------
 
-gulp.task('default', ['styles', 'content', 'js', 'images', 'connect', 'watch']);
+gulp.task('default', ['styles', 'js', 'images', 'connect', 'watch']);
 
 
 // -------------------------------------------------------------

@@ -2,66 +2,87 @@
 // SITE
 //
 
-
-// -------------------------------------------------------------
-// # Site layout
-// -------------------------------------------------------------
-
-// Use a site wrapper?
-// In that case remove width declarations on .row
-
-// .site {
-//     width: $site-width;
-//     max-width: $site-max-width;
-//     @extend .center;
-// }
-
-// .row {
-//     width: $site-width-mobile;
-//     //max-width: $site-max-width;
-//     @extend .center;
-//     //margin-bottom: $margin;
-//     @include clearfix;
-
-//     @include bp(medium) {
-//         width: $site-width-tablet;
-//     }
-// }
-
 .site {
     height: 100vh;
-    background: #458D90;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    
-    img {
-        width: 280px;
-        margin: 0 auto;
-        
-        @include bp(medium) {
-            width: 400px;
-        }
-    
-        @include bp(large) {
-            width: 500px;
-        }
-    }
-    
-    .links {
-        margin-top: 1em;
-        font-size: 2.5em;
-        
-        i { color: #fff; }
-        
-        i:first-child {
-            margin-right: 1em;
-        }
-    }
-}
 
-.wrap {
-    width: 96%;
-    margin: 0 auto;
+    @include bp(medium) {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .image {
+        background: url('../img/seyamakarkannia.jpg') center center no-repeat;
+        background-size: cover;
+        padding-bottom: 80%;
+
+        @include bp(medium) {
+            background: url('../img/seyamakarkannia.jpg') center center no-repeat;
+            background-size: cover;
+            position: relative;
+            padding-bottom: 0;
+            flex: 40%;
+            height: 100%;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(10,10,10,.15);
+            }
+        }
+    }
+
+    .info {
+        padding: 40px 30px;
+        position: relative;
+        background: #fff;
+        width: 94%;
+        margin: -30px auto 0px;
+
+        @include bp(small) {
+            padding: 40px 30px;
+            width: 92%;
+
+        }
+
+        @include bp(medium) {
+            display: flex;
+            flex-direction: column;
+            flex: 60%;
+            margin: 0;
+            padding: 50px;
+        }
+
+        @include bp(large) {
+            padding: 60px;
+        }
+
+        .description {
+
+            @include bp(medium) {
+                flex: 1;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+            }
+
+            a {
+
+                &.linkedin { color: $linkedin; }
+
+                &.avensia { color: $avensia; }
+
+                &.craftmade { color: $craftmade; }
+
+                &.simon { color: $simon; }
+
+                &.mail { color: $mail; }
+            }
+        }
+    }
 }

@@ -9,25 +9,39 @@
 
 h1, .h1,
 h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5 {
-    font-weight: $regular;
-    margin-top: $font-size*2;
-    margin-bottom: $font-size;
+h3, .h3 {
+    font-weight: $light;
+    font-family: $heading;
+    margin-top: 0;
 }
 
 h1, .h1 {
-    font-size: 2.4rem;
-    font-weight: $light;
-    
+    font-size: 22px;
+    margin-bottom: 8px;
+
+    @include bp(small) {
+        font-size: 28px;
+    }
+
     @include bp(medium) {
-        font-size: 3.2rem;
+        font-size: 30px;
     }
 }
 
 h2, .h2 {
-    font-size: 2.8rem;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 400;
+
+    @include bp(small) {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    @include bp(medium) {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
 }
 
 h3, .h3 {
@@ -35,17 +49,17 @@ h3, .h3 {
     font-weight: 600;
 }
 
-h4, .h4 {
-    font-size: 2rem;
-}
-
-h5, .h5 {
-    font-size: 1.6rem;
-}
-
 p {
     margin-top: 0;
     margin-bottom: $font-size;
+    font-family: $paragraph;
+    font-weight: $light;
+    line-height: 2;
+    font-size: 14px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -54,6 +68,11 @@ p {
 // -------------------------------------------------------------
 
 a, a:active, a:visited {
-    color: $black;
     text-decoration: none;
+    font-weight: $regular;
+    color: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
