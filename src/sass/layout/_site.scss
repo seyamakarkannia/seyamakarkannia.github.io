@@ -46,7 +46,6 @@
         @include bp(small) {
             padding: 40px 30px;
             width: 92%;
-
         }
 
         @include bp(medium) {
@@ -72,15 +71,10 @@
             }
 
             a {
-
                 &.linkedin { color: $linkedin; }
-
                 &.avensia { color: $avensia; }
-
                 &.craftmade { color: $craftmade; }
-
                 &.simon { color: $simon; }
-
                 &.mail { color: $mail; }
             }
         }
