@@ -369,7 +369,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   height: 100%;
-  background: #eee; }
+  background: #fff; }
 
 img {
   max-width: 100%;
@@ -383,8 +383,8 @@ h3, .h3 {
   margin-top: 0; }
 
 h1, .h1 {
-  font-size: 24px;
-  margin-bottom: 5px; }
+  font-size: 22px;
+  margin-bottom: 8px; }
   @media (min-width: 481px) {
     h1, .h1 {
       font-size: 28px; } }
@@ -393,11 +393,12 @@ h1, .h1 {
       font-size: 30px; } }
 
 h2, .h2 {
-  font-size: 16px;
-  margin-bottom: 20px; }
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 400; }
   @media (min-width: 481px) {
     h2, .h2 {
-      font-size: 17px;
+      font-size: 16px;
       margin-bottom: 25px; } }
   @media (min-width: 768px) {
     h2, .h2 {
@@ -442,32 +443,39 @@ a, a:active, a:visited {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row; } }
-  @media (min-width: 768px) {
-    .site .image {
-      background: url("../img/v3.jpg") center center no-repeat;
-      background-size: cover;
-      position: relative;
-      -webkit-box-flex: 40%;
-      -webkit-flex: 40%;
-      -ms-flex: 40%;
-      flex: 40%;
-      height: 100%; }
-      .site .image:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(10, 10, 10, 0.25); } }
+  .site .image {
+    background: url("../img/seyamakarkannia.jpg") center center no-repeat;
+    background-size: cover;
+    padding-bottom: 80%; }
+    @media (min-width: 768px) {
+      .site .image {
+        background: url("../img/seyamakarkannia.jpg") center center no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-bottom: 0;
+        -webkit-box-flex: 40%;
+        -webkit-flex: 40%;
+        -ms-flex: 40%;
+        flex: 40%;
+        height: 100%; }
+        .site .image:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: rgba(10, 10, 10, 0.15); } }
   .site .info {
-    padding: 40px 20px;
+    padding: 40px 30px;
     position: relative;
     background: #fff;
-    width: 100%; }
+    width: 94%;
+    margin: -30px auto 0px; }
     @media (min-width: 481px) {
       .site .info {
-        padding: 40px 30px; } }
+        padding: 40px 30px;
+        width: 92%; } }
     @media (min-width: 768px) {
       .site .info {
         display: -webkit-box;
@@ -488,44 +496,33 @@ a, a:active, a:visited {
     @media (min-width: 1140px) {
       .site .info {
         padding: 60px; } }
-    .site .info .top svg.logo {
-      height: 40px;
-      color: #222222;
-      fill: currentColor;
-      display: inherit;
-      float: left; }
-      @media (min-width: 768px) {
-        .site .info .top svg.logo {
-          height: 45px; } }
-    .site .info .description {
-      margin: 65px 0 0; }
-      @media (min-width: 768px) {
-        .site .info .description {
-          -webkit-box-flex: 1;
-          -webkit-flex: 1;
-          -ms-flex: 1;
-          flex: 1;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          margin: 0; } }
-      .site .info .description a.linkedin {
-        color: #007bb5; }
-      .site .info .description a.avensia {
-        color: #fdc300; }
-      .site .info .description a.craftmade {
-        color: #000000; }
-      .site .info .description a.simon {
-        color: #b98a72; }
-      .site .info .description a.mail {
-        color: #d86565; }
+    @media (min-width: 768px) {
+      .site .info .description {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0; } }
+    .site .info .description a.linkedin {
+      color: #007bb5; }
+    .site .info .description a.avensia {
+      color: #fdc300; }
+    .site .info .description a.craftmade {
+      color: #000000; }
+    .site .info .description a.simon {
+      color: #b98a72; }
+    .site .info .description a.mail {
+      color: #d86565; }
