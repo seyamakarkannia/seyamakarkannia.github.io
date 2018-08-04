@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
     connect = require('gulp-connect'),
-    svgmin = require('gulp-svgmin'),
+    imagemin = require('gulp-imagemin');
     deploy = require("gulp-gh-pages");
 
 gulp.task('styles', function() {
@@ -21,9 +21,9 @@ gulp.task('js', function() {
 });
 
 gulp.task('images', function() {
-    return gulp.src('src/images/*.svg')
-        .pipe(svgmin())
-        .pipe(gulp.dest('build/images'))
+    return gulp.src('src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/img'))
         .pipe(connect.reload());
 });
 
@@ -37,7 +37,7 @@ gulp.task('connect', function() {
 gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['styles']);
     gulp.watch('src/js/**/*.js', ['js']);
-    // gulp.watch('src/images/*.jpg', ['images']);
+    gulp.watch('src/img/*', ['images']);
 });
 
 
